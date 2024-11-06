@@ -15,7 +15,7 @@ def grab_center(x, y, w, h):
     cy = y + y1
     return cx, cy
 cap = cv2.VideoCapture('video.mp4')
-subtraction = cv2.bgsegm.createBackgroundSubtractorMOG()
+subtraction = cv2.createBackgroundSubtractorMOG2()
 while True:
     ret, frame1 = cap.read()
     tempo = float(1 / delay)
